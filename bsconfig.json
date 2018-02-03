@@ -12,8 +12,10 @@
   },
   "suffix": ".bs.js",
   "bs-dependencies": [
-    "bs-express"
+    "bs-express",
+    "reason-react"
   ],
   "namespace": true,
-  "refmt": 3
+  "refmt": 3,
+  "reason": {"react-jsx": 2}
 }

@@ -1,7 +1,7 @@
 let app = Express.App.make();
 
 let renderHTML = (_next, _req, res) => {
-  let content = "Hello World";
+  let content = ReactDOMServerRe.renderToString(<App />);
   Express.Response.sendString(content, res);
 };
 
