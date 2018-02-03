@@ -4,7 +4,8 @@
   "scripts": {
     "build": "bsb -make-world",
     "start": "bsb -make-world -w",
-    "clean": "bsb -clean-world"
+    "clean": "bsb -clean-world",
+    "server": "node src/demo.bs.js"
   },
   "keywords": [
     "BuckleScript"
@@ -13,5 +14,9 @@
   "license": "MIT",
   "devDependencies": {
     "bs-platform": "^2.1.0"
+  },
+  "dependencies": {
+    "bs-express": "^0.4.0",
+    "express": "^4.16.2"
   }
 }
