@@ -2,7 +2,7 @@ let app = Express.App.make();
 
 let renderHTML = (_next, _req, res) => {
   let content = ReactDOMServerRe.renderToString(<App />);
-  Express.Response.sendString(content, res);
+  Express.Response.sendString(Template.make(~content, ~title="Server Rendering", ()), res);
 };
 
 renderHTML
