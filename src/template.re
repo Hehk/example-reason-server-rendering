@@ -6,6 +6,7 @@ let make = (~content, ~title, ()) => {j|
       </head>
       <body>
         <div id="react-root">$content</div>
+        <script src="/assets/bundle.js"></script>
       </body>
     </html>
 |j};

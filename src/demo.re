@@ -5,9 +5,12 @@ let renderHTML = (_next, _req, res) => {
   Express.Response.sendString(Template.make(~content, ~title="Server Rendering", ()), res);
 };
 
-renderHTML
-|> Express.Middleware.from
-|> Express.App.useOnPath(~path="/", app);
+Express.Static.defaultOptions()
+|> Express.Static.make("assets/")
+|> Express.Static.asMiddleware
+|> Express.App.useOnPath(app, ~path="/assets");
+
+renderHTML |> Express.Middleware.from |> Express.App.useOnPath(~path="/", app);
 
 let port = 3000;
 

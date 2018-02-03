@@ -18,6 +18,8 @@ function renderHTML(_, _$1, res) {
   return Express.Response[/* sendString */2](Template$ServerRendering.make(content, "Server Rendering", /* () */0), res);
 }
 
+Curry._3(Express.App[/* useOnPath */2], app, "/assets", Express.Static[/* asMiddleware */4](Express.Static[/* make */3]("assets/", Express.Static[/* defaultOptions */0](/* () */0))));
+
 Curry._3(Express.App[/* useOnPath */2], app, "/", Express.Middleware[/* from */3](renderHTML));
 
 function onListen(e) {
